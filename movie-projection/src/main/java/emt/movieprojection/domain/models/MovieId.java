@@ -8,7 +8,7 @@ public class MovieId extends DomainObjectId {
         super(MovieId.randomId(MovieId.class).getId());
     }
 
-    protected MovieId(@NonNull String uuid) {
+    public MovieId(@NonNull String uuid) {
         super(uuid);
     }
 }

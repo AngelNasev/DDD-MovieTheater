@@ -8,7 +8,13 @@ public class ProjectionId extends DomainObjectId {
         super(ProjectionId.randomId(ProjectionId.class).getId());
     }
 
-    protected ProjectionId(@NonNull String uuid) {
+    public ProjectionId(@NonNull String uuid) {
         super(uuid);
     }
+
+    public static ProjectionId of(String uuid) {
+        ProjectionId p = new ProjectionId(uuid);
+        return p;
+    }
+
 }

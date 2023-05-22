@@ -11,4 +11,9 @@ public class TicketId extends DomainObjectId {
     public TicketId(@NonNull String uuid) {
         super(uuid);
     }
+
+    public static TicketId of(String uuid) {
+        TicketId p = new TicketId(uuid);
+        return p;
+    }
 }

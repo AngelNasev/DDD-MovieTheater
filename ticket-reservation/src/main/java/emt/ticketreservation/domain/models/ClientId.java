@@ -8,7 +8,11 @@ public class ClientId extends DomainObjectId {
         super(ClientId.randomId(ClientId.class).getId());
     }
 
-    protected ClientId(@NonNull String uuid) {
+    public ClientId(@NonNull String uuid) {
         super(uuid);
+    }
+    public static ClientId of(String uuid) {
+        ClientId c = new ClientId(uuid);
+        return c;
     }
 }
